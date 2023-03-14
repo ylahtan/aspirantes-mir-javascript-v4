@@ -2,12 +2,12 @@ const max = function (arr) {
 
     if (arr.length === 0) return undefined;
 
-    let max = arr[0];
+    let sup = arr[0];
     for (let i = 0; i < arr.length; i++) {
-        if (max < arr[i]) max = arr[i];
+        if (sup < arr[i]) sup = arr[i];
     }
 
-    return max;
+    return sup;
 }
 
 console.log(max([1, 3, 2]));
