@@ -16,8 +16,8 @@ for (const llave in pedro) {
     console.log(llave, ":", pedro[llave]);
 }
 
-pedro.saluda = function (nombre) {
-    return `hola, me llamo ${nombre}`;
+pedro.saluda = function () {
+    return `hola, me llamo ${this.nombre}`;
 }
 
 console.log(pedro.saluda("Pedro Perez"));

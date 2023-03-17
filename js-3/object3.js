@@ -14,10 +14,10 @@ receta.ingredientes.push({
 
 console.log(receta.ingredientes[0].nombre);
 
-let sum_cantidad = 0
+let sum_cantidad = 0;
 
 receta.ingredientes.forEach(obj => {
-    if(obj["cantidad"]) {
+    if (obj["cantidad"]) {
         sum_cantidad += obj["cantidad"];
     }
 });
