@@ -24,7 +24,7 @@ li {
     position: relative;
     left: 25px;
     padding: 10px;
-    background:#75b7f5d1;
+    background: #75b7f5d1;
     display: inline-block;
 }
 
@@ -54,6 +54,6 @@ ul ul li {
     width: 100px;
 }
 
-ul li:hover > ul {
+ul li:hover>ul {
     display: block;
 }
