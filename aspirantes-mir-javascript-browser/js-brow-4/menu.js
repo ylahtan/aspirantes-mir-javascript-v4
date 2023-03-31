@@ -70,6 +70,7 @@ const menuContainer = document.querySelector('#menu');
 
 for (let i = 0; i < menu.length; i++) {
     const menuItem = document.createElement('li');
+    menuItem.className="root-menu-item";
     const menuItemLink = document.createElement('a');
     menuItemLink.href = menu[i].link;
     menuItemLink.textContent = menu[i].name;

@@ -32,6 +32,7 @@ form {
 
 #todo-input {
     margin-right: 10px;
+    width: 82%
 }
 
 #todo-input:focus {
@@ -68,6 +69,10 @@ button[type="submit"] {
     background-color: #dd7cea;
     border: 1px solid #dd7cea;
     width: 18%;
+}
+
+label {
+    margin-left: 5px;
 }
 
 #filter-options {

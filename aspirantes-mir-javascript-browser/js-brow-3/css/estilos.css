@@ -12,7 +12,7 @@ form {
     border-radius: 15px;
     background: #ffffff;
     background-position: center;
-    box-shadow: 6px 6px 8px 8px #c5e1f7;
+    box-shadow: 3px 2px 4px 6px #E3E3E3;
 }
 
 #name,
@@ -27,5 +27,24 @@ form div {
 
 .caja {
     position: relative;
-    left: 45px;
+    left: 25px;
+}
+
+#save {
+    margin: 5px;
+    background-color: #3BD16F;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: black;
+}
+
+#remove {
+    width: 32%;
+    margin: 5px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: #ffffff;
 }
