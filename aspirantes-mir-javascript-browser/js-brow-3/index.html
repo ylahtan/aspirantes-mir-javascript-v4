@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+        <div>
+            <form>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+                <br><br>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Ingresa tu Email" />
+                <br><br>
+                <div class="caja">
+                <button type="submit" id="save" name="'SumitButton" value="Guardar">Guardar</button>
+                <button type="button" id="remove" name="SumitButton" value="Borrar">Borrar</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <section></section>
+    <script>
+        onload = () => {
+            showName();
+        }
+
+        const form = document.querySelector('form');
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const section = document.querySelector('section');
+        const remove = document.getElementById("remove");
+
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            if (name.value && email.value) {
+
+                const userData = {
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                }
+
+                localStorage.setItem("user_data", JSON.stringify(userData));
+                showName();
+                clearForm();
+            } else {
+                alert("Por favor, llene los campos del formulario");
+            }
+        });
+
+        function clearForm() {
+            name.value = "";
+            email.value = "";
+        }
+
+        remove.addEventListener('click', () => {
+            clearForm();
+            deleteName();
+
+        });
+
+
+        function showName() {
+            const infoUserData = JSON.parse(localStorage.getItem("user_data"));
+            let info_text = "Nombre: " + infoUserData.name;
+            info_text += "<br> E-mail: " + infoUserData.email;
+            section.innerHTML = info_text;
+        }
+
+
+        function deleteName() {
+            localStorage.removeItem("user_data");
+            section.innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
