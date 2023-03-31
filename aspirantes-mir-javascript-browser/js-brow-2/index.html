@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tareas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/main.css">
+
+</head>
+
+<body>
+    <h1>Cosas por hacer</h1>
+    <form id="todo-form">
+        <section id="todo-form_task">
+            <input type="text" id="todo-input" placeholder="Ingresa una nueva tarea">
+            <button type="submit">Add</button>
+        </section>
+        <section id="filter-options">
+            <div>
+                <input type="checkbox" id="filter-completed">
+                <label>Tarea Completada</label>
+            </div>
+            <div>
+                <input type="checkbox" id="filter-uncompleted">
+                <label>Tarea No Completada</label>
+            </div>
+        </section>
+    </form>
+    <section id="todo_list-block">
+        <ul id="todo-list"></ul>
+        <button id="delete-all-done">Delete All Done</button>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
